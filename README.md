@@ -1,2 +1,2 @@
-# deep_learning_frameworks_cnn
+# Deep Learning Frameworks
 Case Study: Convolutional Neural Networks
