@@ -1,0 +1,6 @@
+# Jupyter
+notebook
+
+# PyTorch
+torch
+torchvision
