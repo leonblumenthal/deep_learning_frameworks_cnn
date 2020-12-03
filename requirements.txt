@@ -4,3 +4,6 @@ notebook
 # PyTorch
 torch
 torchvision
+
+# TensorFlow
+tensorflow
