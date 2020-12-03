@@ -4,7 +4,7 @@ from tensorflow.keras import datasets, layers, models, losses, optimizers
 
 ### Hyperparameters
 
-EPOCHS = 1
+EPOCHS = 10
 BATCH_SIZE = 32
 LEARNING_RATE = 0.01
 LEARNING_RATE_DECAY = 0.8
@@ -24,6 +24,8 @@ test_images = tf.image.per_image_standardization(test_images)
 
 
 ### Create network and set hyperparameters.
+
+# TODO: GPU usage
 
 # Simplest implementation for the desired network structure
 net = models.Sequential(
