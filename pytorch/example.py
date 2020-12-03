@@ -26,7 +26,7 @@ test_dataset = datasets.MNIST('data', train=False, download=True, transform=tran
 
 # Shuffle images and split into mini batches.
 train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
-test_loader = DataLoader(test_dataset)
+test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE)
 
 
 ### Create network and set hyperparameters.
@@ -58,6 +58,8 @@ net.to(device)
 optimizer = optim.SGD(net.parameters(), LEARNING_RATE, MOMENTUM)
 scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=LEARNING_RATE_DECAY)
 
+loss_function = nn.CrossEntropyLoss()
+
 
 ### Train and test helper functions
 
@@ -73,7 +75,7 @@ def train():
         images, labels = images.to(device), labels.to(device)
 
         # Compute loss based on outputs and labels.
-        loss = F.cross_entropy(net(images), labels)
+        loss = loss_function(net(images), labels)
         # Compute gradients and update parameters.
         optimizer.zero_grad()
         loss.backward()
@@ -117,8 +119,8 @@ def test():
 
 ### Actual training and testing
 
-for e in range(EPOCHS):
-    print(f'Epoch {e + 1}/{EPOCHS}')
+for epoch in range(EPOCHS):
+    print(f'Epoch {epoch + 1}/{EPOCHS}')
 
     train()
     test()
