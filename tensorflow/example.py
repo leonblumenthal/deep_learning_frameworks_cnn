@@ -25,7 +25,6 @@ test_images = tf.image.per_image_standardization(test_images)
 
 ### Create network and set hyperparameters.
 
-# TODO: GPU usage
 
 # Simplest implementation for the desired network structure
 net = models.Sequential(

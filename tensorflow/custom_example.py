@@ -35,8 +35,6 @@ test_ds = tf.data.Dataset.from_tensor_slices((test_images, test_labels)).batch(
 
 ### Create network and set hyperparameters.
 
-# TODO: GPU usage
-
 # Simplest implementation for the desired network structure
 net = models.Sequential(
     [
