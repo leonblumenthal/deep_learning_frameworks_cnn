@@ -1,4 +1,4 @@
-# Deep Learning Frameworks - Case Study: Convolutional Neural Networks  
+# Deep Learning Frameworks - Case Study: Convolutional Neural Network  
 
 *TensorFlow vs. PyTorch*
 

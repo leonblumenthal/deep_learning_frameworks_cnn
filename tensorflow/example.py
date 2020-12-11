@@ -25,7 +25,6 @@ test_images = tf.image.per_image_standardization(test_images)
 
 ### Create network and set hyperparameters.
 
-
 # Simplest implementation for the desired network structure
 net = models.Sequential(
     [
@@ -52,11 +51,9 @@ scheduler = optimizers.schedules.ExponentialDecay(
 )
 optimizer = optimizers.SGD(learning_rate=scheduler, momentum=MOMENTUM)
 
-net.compile(
-    loss=losses.SparseCategoricalCrossentropy(),
-    optimizer=optimizer,
-    metrics='accuracy',
-)
+loss_function = losses.SparseCategoricalCrossentropy()
+
+net.compile(optimizer, loss_function, metrics='accuracy')
 
 ### Actual training and testing
 
