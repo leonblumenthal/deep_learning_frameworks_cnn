@@ -16,8 +16,8 @@ MOMENTUM = 0.9
 (train_images, train_labels), (test_images, test_labels) = datasets.mnist.load_data()
 
 # Convert grayscale values from [0,255] to [0,1] and add depth dimension.
-train_images = train_images[..., tf.newaxis].astype("float32") / 255
-test_images = test_images[..., tf.newaxis].astype("float32") / 255
+train_images = train_images[..., tf.newaxis].astype('float32') / 255
+test_images = test_images[..., tf.newaxis].astype('float32') / 255
 # Standardize images.
 train_images = tf.image.per_image_standardization(train_images)
 test_images = tf.image.per_image_standardization(test_images)

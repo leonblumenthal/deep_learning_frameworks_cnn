@@ -51,7 +51,7 @@ net = nn.Sequential(
 )
 
 # Choose GPU if available.
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 net.to(device)
 
 # Stochastic gradient descent with momentum and learning rate decay
