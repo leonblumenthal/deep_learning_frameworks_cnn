@@ -1,6 +1,6 @@
 # Deep Learning Frameworks - Case Study: Convolutional Neural Network  
 
-*TensorFlow vs. PyTorch*
+*This is the code for a seminar paper on deep learning frameworks.*
 
 ## Dataset
 
