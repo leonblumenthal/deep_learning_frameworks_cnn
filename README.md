@@ -1,6 +1,6 @@
 # Deep Learning Frameworks - Case Study: Convolutional Neural Network  
 
-*This is a comparison of TensorFlow and PyTorch on a simple example as part of a seminar paper.*
+*This is a comparison of TensorFlow and PyTorch on a simple example as part of a seminar [paper](paper.pdf).*
 
 ## Dataset
 
